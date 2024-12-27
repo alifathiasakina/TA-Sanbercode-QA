@@ -14,7 +14,7 @@ describe('Validate Login Functionality for Valid and Invalid Credentials', () =>
     it('Verify the user can log in with valid credentials', () => {
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             body: {
                 username: 'Admin',
                 password: 'admin123'
@@ -39,7 +39,7 @@ describe('Validate Login Functionality for Valid and Invalid Credentials', () =>
     it('Verify the user cannot log in with invalid credentials', () => {
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: 'Admin',
@@ -68,7 +68,7 @@ describe('Validate Login Functionality for Valid and Invalid Credentials', () =>
     it('Verify login fails if the account does not exist', () => {
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: 'dummyacc',
@@ -109,7 +109,7 @@ describe('Validate Login Field Requirements and Input Formats', () => {
 
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: '',
@@ -139,7 +139,7 @@ describe('Validate Login Field Requirements and Input Formats', () => {
 
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: 'anon@#$%!.com',
@@ -168,7 +168,7 @@ describe('Validate Secure Password Handling: Masking, Length, and Case Sensitivi
 
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: 'Admin',
@@ -194,7 +194,7 @@ describe('Validate Secure Password Handling: Masking, Length, and Case Sensitivi
 
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: 'Admin',
@@ -227,7 +227,7 @@ describe('Validate Secure Password Handling: Masking, Length, and Case Sensitivi
 
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: 'ADMin',
@@ -267,7 +267,7 @@ describe('Validate Login for Account Statuses: Restrict Access for Locked or Non
 
         cy.request({
             method: 'POST',
-            url: 'https://opensource-demo.orangehrmlive.com/api/v1/auth/login',
+            url: '/api/v1/auth/login',
             failOnStatusCode: false,
             body: {
                 username: 'newAdmin',
