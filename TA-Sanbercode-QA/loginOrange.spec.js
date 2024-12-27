@@ -5,7 +5,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
   });
 
-  describe('Validate Login Functionality for Valid and Invalid Credentials', () => {
+describe('Validate Login Functionality for Valid and Invalid Credentials', () => {
     const loginPOM = new OrangePOM();
     beforeEach(() => {
         loginPOM.elements.visitPage();
