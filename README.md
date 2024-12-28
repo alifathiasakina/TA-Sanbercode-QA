@@ -1,4 +1,4 @@
-# Cypress Test Suite for OrangeHRM - Directory Page & Login
+# Cypress Test Suite for OrangeHRM - Login, Reset Password, and Directory Page
 
 ## Project Overview
 
