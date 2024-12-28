@@ -32,6 +32,19 @@ class OrangePOM {
         locationColumn: () => cy.get('p.orangehrm-directory-card-description'),
         questionMarkIcon: () => cy.get('i.bi-question-lg'),
         footerText: () => cy.get('p.orangehrm-copyright'),
+        resetPasswordTitle: () => cy.get('h6.orangehrm-forgot-password-title'),
+        resetPasswordInstructions: () => cy.get('p.oxd-text--p'),
+        usernameIcon: () => cy.get('i.oxd-icon.bi-person.oxd-input-group__label-icon'),
+        usernameLabel: () => cy.get('label.oxd-label'),
+        usernameInput: () => cy.get('input.oxd-input[name="username"]'),
+        cancelButton: () =>
+            cy.get('button.oxd-button.oxd-button--large.oxd-button--ghost.orangehrm-forgot-password-button.orangehrm-forgot-password-button--cancel'),
+        resetButton: () =>
+            cy.get('button.oxd-button.oxd-button--large.oxd-button--secondary.orangehrm-forgot-password-button.orangehrm-forgot-password-button--reset'),
+        copyrightText1: () =>
+            cy.contains('p.oxd-text.oxd-text--p.orangehrm-copyright', 'OrangeHRM OS 5.7'),
+        copyrightText2: () =>
+            cy.contains('p.oxd-text.oxd-text--p.orangehrm-copyright', '© 2005 - 2024 OrangeHRM, Inc. All rights reserved.')
     }
     typeonUsername(username){
         this.elements.usernameInput().type(username);
