@@ -4,12 +4,6 @@
 
 This repository contains a set of Cypress tests for validating core functionalities of the **OrangeHRM** application, specifically focusing on the **Login**, **Password Reset**, and the **Directory Page** flow.
 
-The test suite includes the following key files:
-- **OrangePOM.js**: Page Object Model (POM) that defines the reusable methods and elements for interacting with the OrangeHRM application.
-- **loginOrange.spec.js**: Tests for logging in and accessing different pages within the application.
-- **forgotpassOrange.spec.js**: Tests for the Forgot Password functionality, ensuring that the password reset page is accessible.
-- **dashboardOrange.spec.js**: Tests for the Directory page, including navigation, search, and filtering functionalities.
-
 ## Installation
 
 1. Clone the repository to your local machine:
